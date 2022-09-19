@@ -11,8 +11,6 @@ const {
   MARIADB_DATABASE,
 } = process.env;
 
-console.log(process.env.MARIADB_USERNAME);
-
 module.exports = {
   host: MARIADB_HOST,
   port: Number(MARIADB_PORT),

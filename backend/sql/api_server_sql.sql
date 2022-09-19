@@ -36,9 +36,4 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
-show tables;
-use mysql;
-select user, host, password from user;
-desc user;
-
 -- update mysql.user set password = password('1234') where user = 'root' and host='%'
