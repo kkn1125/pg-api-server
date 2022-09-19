@@ -12,7 +12,7 @@ const multer = require("multer");
 const path = require("path");
 
 // controllers
-const memberController = require("./controllers/test.controller");
+const userController = require("./controllers/user.controller");
 
 require("dotenv").config({
   path: path.join(__dirname, "./../.env"),
@@ -47,7 +47,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // routers
-app.use("/api", memberController);
+app.use("/api", userController);
 
 // index contents
 app.get("/", (req, res) => {

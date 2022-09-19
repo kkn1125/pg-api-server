@@ -41,22 +41,6 @@ user.findById = (req, res) => {
   });
 };
 
-user.create = (req, res) => {
-  sql.query("select * from user", (err, rows) => {
-    if (err) {
-      res.status(500).json({
-        ok: false,
-        message: "error",
-      });
-    } else {
-      res.status(200).json({
-        ok: true,
-        payload: rows,
-      });
-    }
-  });
-};
-
 user.update = (req, res) => {
   sql.query("select * from user", (err, rows) => {
     if (err) {
@@ -74,6 +58,44 @@ user.update = (req, res) => {
 };
 
 user.delete = (req, res) => {
+  sql.query("select * from user", (err, rows) => {
+    if (err) {
+      res.status(500).json({
+        ok: false,
+        message: "error",
+      });
+    } else {
+      res.status(200).json({
+        ok: true,
+        payload: rows,
+      });
+    }
+  });
+};
+
+/**
+ * ## user signup
+ */
+user.signup = (req, res) => {
+  sql.query("select * from user", (err, rows) => {
+    if (err) {
+      res.status(500).json({
+        ok: false,
+        message: "error",
+      });
+    } else {
+      res.status(200).json({
+        ok: true,
+        payload: rows,
+      });
+    }
+  });
+};
+
+/**
+ * ## compare password with input password
+ */
+user.comparePassword = (req, res) => {
   sql.query("select * from user", (err, rows) => {
     if (err) {
       res.status(500).json({
